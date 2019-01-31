@@ -2,6 +2,7 @@
 
 export(analysis_plan)
 export(calculate_coef)
+export(calculate_coef_api)
 export(plot_coef)
 export(plot_country)
 export(slow_lm)

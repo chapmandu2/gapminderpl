@@ -18,5 +18,8 @@ Imports:
     drake,
     future,
     clustermq,
-    furrr
+    furrr,
+    httr,
+    jsonlite,
+    tibble
 RoxygenNote: 6.1.1
