@@ -20,5 +20,5 @@ RUN R -e "devtools::install('/gapminderpl', dependencies=FALSE, upgrade_dependen
 
 #configure shiny server
 COPY ./docker/shiny-server.conf /etc/shiny-server/shiny-server.conf
-#COPY ./inst/shiny/test_app.R /home/rstudio/ShinyApps/gapminderpl/test_app/app.R
-#RUN chown -hR rstudio:rstudio /home/rstudio/ShinyApps
+COPY ./inst/shiny/test_viz_app.R /home/rstudio/ShinyApps/gapminderpl/test_viz_app/app.R
+RUN chown -hR rstudio:rstudio /home/rstudio/ShinyApps

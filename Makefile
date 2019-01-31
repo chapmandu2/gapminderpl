@@ -24,8 +24,8 @@ run: build
 		-v ${HOME}:/home/rstudio/hostdata \
 		gapminderpl
 	sleep 3;
-	open http://localhost:8789/
-	open http://localhost:3839/users/rstudio/gapminderpl/
+	firefox http://localhost:8789/
+	firefox http://localhost:3839/users/rstudio/gapminderpl/
 
 stop:
 	docker stop gapminderpl-rstudio
