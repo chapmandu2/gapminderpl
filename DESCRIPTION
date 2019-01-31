@@ -1,6 +1,6 @@
 Package: gapminderpl
 Type: Package
-Title: Exmaple Data Pipelines For Gapminder
+Title: Example Data Pipelines For Gapminder
 Version: 0.1.0
 Author: Phil Chapman
 Maintainer: Phil Chapman <chapmandu2@gmail.com>
