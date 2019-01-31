@@ -19,3 +19,4 @@ Imports:
     future,
     clustermq,
     furrr
+RoxygenNote: 6.1.1
