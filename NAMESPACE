@@ -2,5 +2,6 @@
 
 export(plot_coef)
 export(plot_country)
+export(slow_lm)
 import(ggplot2)
 importFrom(magrittr,"%>%")
