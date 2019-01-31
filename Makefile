@@ -35,3 +35,18 @@ start:
 
 remove: stop
 	docker rm gapminderpl-rstudio
+
+deploy: build
+	docker run -d -p 8001:8001 \
+		-e DISABLE_AUTH=true \
+		-e API_SCRIPT=basic-test-api.R \
+		--name='gapminderpl-deploy' \
+		gapminderpl Rscript /plumber/plumber-apis/deploy.R;
+
+	sleep 3;
+	firefox 127.0.0.1:8001/echo?msg=hello;
+
+stop-deploy:
+	docker stop gapminderpl-deploy;
+	docker rm gapminderpl-deploy;
+
