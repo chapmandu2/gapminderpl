@@ -39,9 +39,8 @@ remove: stop
 deploy: build
 	docker run -d -p 8001:8001 \
 		-e DISABLE_AUTH=true \
-		-e API_SCRIPT=gapminder-api.R \
 		--name='gapminderpl-deploy' \
-		gapminderpl Rscript /plumber/plumber-apis/deploy.R;
+		gapminderpl R -e 'gapminderpl::gapminder_api(port=8001)'
 
 	sleep 3;
 	firefox 127.0.0.1:8001/plot_country?country=Algeria;
