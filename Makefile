@@ -18,7 +18,7 @@ build:
 	docker build --file=docker/Dockerfile --tag=gapminderpl .
 
 run: build
-	docker run -d -p 8789:8787 -p 3839:3838 \
+	docker run -d -p 8789:8787 -p 3839:3838 -p 8000:8000 \
 		-e DISABLE_AUTH=true \
 		--name='gapminderpl-rstudio' \
 		-v ${HOME}:/home/rstudio/hostdata \
